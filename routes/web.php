@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PegawaiDBController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('menu');
 });
 
 Route::get('halo', function () {
@@ -53,3 +55,8 @@ Route::get('idx', function () {
 Route::get('lnktree', function () {
 	return view('linktree');
 });
+
+Route::get('/pegawailama/{nama}', [PegawaiController::class, 'index']);
+
+//route CRUD
+Route::get('/pegawai',[PegawaiDBController::class, 'coba']);
