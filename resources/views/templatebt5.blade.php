@@ -27,7 +27,7 @@
                         <a class="nav-link" href="#">Nama Tabel PR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Siswa</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Latihan 1</a>

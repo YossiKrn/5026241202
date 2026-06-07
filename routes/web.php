@@ -75,3 +75,11 @@ Route::get('/teh/edit/{id}', [TehDBController::class, 'edit']);
 Route::post('/teh/update', [TehDBController::class, 'update']);
 Route::get('/teh/hapus/{id}', [TehDBController::class, 'hapus']);
 Route::get('/teh/cari', [TehDBController::class, 'cari']);
+
+//route CRUD Siswa
+Route::get('/siswa', [SiswaDBController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaDBController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaDBController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaDBController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaDBController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaDBController::class, 'destroy'])->name('siswa.destroy');
