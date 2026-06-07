@@ -36,6 +36,9 @@
                         <a class="nav-link disabled" href="#">Latihan 2</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/blueray">Tugas Pra EAS</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link disabled" href="#">EAS</a>
                     </li>
                 </ul>

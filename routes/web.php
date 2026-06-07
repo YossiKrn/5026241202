@@ -66,3 +66,12 @@ Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
+
+// route CRUD Teh
+Route::get('/teh', [TehDBController::class, 'teh']);
+Route::get('/teh/tambah', [TehDBController::class, 'tambah']);
+Route::post('/teh/store', [TehDBController::class, 'store']);
+Route::get('/teh/edit/{id}', [TehDBController::class, 'edit']);
+Route::post('/teh/update', [TehDBController::class, 'update']);
+Route::get('/teh/hapus/{id}', [TehDBController::class, 'hapus']);
+Route::get('/teh/cari', [TehDBController::class, 'cari']);
