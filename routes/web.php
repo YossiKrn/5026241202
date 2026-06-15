@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\TehDBController;
+use App\Http\Controllers\nilaikuliahDBController;
+use App\Http\Controllers\keranjangbelanjaDBController;
+use App\Http\Controllers\SiswaDBController;
+use App\Http\Controllers\penggajianDBController;
 
 Route::get('/', function () {
-    return view('menu');
+    return view('welcome');
 });
 
 Route::get('halo', function () {
@@ -98,3 +103,9 @@ Route::get('d4', [keranjangbelanjaDBController::class, 'index']);
 Route::get('d4/tambah', [keranjangbelanjaDBController::class, 'beli']);
 Route::post('d4/store', [keranjangbelanjaDBController::class, 'store']);
 Route::get('d4/hapus/{id}', [keranjangbelanjaDBController::class, 'hapus']);
+
+//penggajian
+Route::get('penggajian', [penggajianDBController::class, 'index']);
+Route::get('penggajian/tambah', [penggajianDBController::class, 'tambah']);
+Route::post('penggajian/store', [penggajianDBController::class, 'store']);
+Route::post('penggajian/update', [penggajianDBController::class, 'update']);

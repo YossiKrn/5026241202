@@ -13,13 +13,13 @@ class tehDBController extends Controller
         $teh = DB::table('teh')->paginate(5);
 
         // mengirim data teh ke view
-        return view('teh', ['teh' => $teh]);
+        return view('teh.teh', ['teh' => $teh]);
     }
 
     // method untuk menampilkan form tambah teh
     public function tambah()
     {
-        return view('tambahteh');
+        return view('teh.tambahteh');
     }
 
     // method untuk insert data teh
@@ -39,7 +39,7 @@ class tehDBController extends Controller
     {
         $teh = DB::table('teh')->where('kodeteh', $id)->get();
 
-        return view('editteh', ['teh' => $teh]);
+        return view('teh.editteh', ['teh' => $teh]);
     }
 
     // update data teh
@@ -71,6 +71,6 @@ class tehDBController extends Controller
             ->where('merkteh', 'like', "%" . $cari . "%")
             ->paginate(10);
 
-        return view('teh', ['teh' => $teh]);
+        return view('teh.teh', ['teh' => $teh]);
     }
 }

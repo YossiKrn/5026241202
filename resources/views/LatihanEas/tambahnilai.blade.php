@@ -11,7 +11,7 @@
         <div class="card-body">
             <form action="/e5/store" method="post">
                 {{ csrf_field() }}
-                <!-- tidak menggunakan kode ikan saat menambah karena auto increment-->
+
                 <div class="row mb-3">
                     <label for="NRP" class="col-sm-2 col-form-label">NRP</label>
                     <div class="col-sm-10">

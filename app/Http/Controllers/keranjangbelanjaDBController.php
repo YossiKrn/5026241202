@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
-class keranjangbelanja extends Controller
+class keranjangbelanjaDBController extends Controller
 {
     public function index()
     {
         $keranjangbelanja = DB::table('keranjangbelanja')->get();
-        return view('d4',['keranjangbelanja' => $keranjangbelanja]);
+        return view('LatihanEas.d4',['keranjangbelanja' => $keranjangbelanja]);
     }
 
     public function beli()
 	{
 
 		// memanggil view tambah
-		return view('beli');
+		return view('LatihanEas.beli');
 
 	}
     public function store(Request $request)
@@ -30,7 +30,7 @@ class keranjangbelanja extends Controller
 			'Harga' => $request->Harga
 		]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/d4');
+		return redirect('/LatihanEas/d4');
 
 	}
     public function hapus($id)
@@ -39,6 +39,6 @@ class keranjangbelanja extends Controller
 		DB::table('keranjangbelanja')->where('ID',$id)->delete();
 
 		// alihkan halaman ke halaman pegawai
-		return redirect('/d4');
+		return redirect('/LatihanEas/d4');
 	}
 }
